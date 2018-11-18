@@ -1,2 +1,1 @@
-"# fluent-python" 
-"# fluent-python" 
+《Fluent Python》

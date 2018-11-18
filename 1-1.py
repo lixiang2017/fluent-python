@@ -18,6 +18,7 @@ class FrenchDeck:
         return self._cards[position]
 
 
+# 香港称"啤酒牌"
 beer_card = Card('7', 'diamonds')
 print(beer_card)
 
@@ -59,5 +60,15 @@ for card in reversed(deck):
 print(Card('Q', 'hearts') in deck)
 print(Card('7', 'beasts') in deck)
 
+# sort 2最小、A最大 黑桃最大、红桃次之、方块再次、梅花最小
+# 点数优先：先比较点数，再比较花色
+suit_values = dict(spades = 3, hearts = 2, diamonds = 1, clubs = 0)
+# print(suit_values)
+def spades_high(card):
+    rank_value = FrenchDeck.ranks.index(card.rank)
+    return rank_value * len(suit_values) + suit_values[card.suit]
 
+for card in sorted(deck, key = spades_high):
+    print(card)
 
+# 洗牌 __setitem__

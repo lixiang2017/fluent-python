@@ -14,3 +14,12 @@ class Coordinate:
         self.lon = lon
 
 # end::COORDINATE[]
+
+
+moscow = Coordinate(55.756, 37.617)
+print(moscow)
+
+'''
+<__main__.Coordinate object at 0x7f98d57e8f10>
+[Finished in 42ms]
+'''
